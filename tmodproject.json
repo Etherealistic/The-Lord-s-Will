@@ -1,0 +1,6 @@
+{
+  "rootNamespace": "TheLordsWill",
+  "fileMap": {
+    "Items\\WalkingStick.cs": "TheLordsWill.Items"
+  }
+}
