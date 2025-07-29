@@ -2,21 +2,32 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace TheLordsWill.Items;
+namespace TheLordsWill.Content.Items;
 
 public class WalkingStick : ModItem
 {
-    public override void SetStaticDefaults()
-    {
-        DisplayName.SetDefault("Walking Stick");
-        Tooltip.SetDefault("A sturdy walking stick.");
+    // The Display Name and Tooltip of this item can be edited in the 'Localization/en-US_Mods.FUCKYOUDUCKYOUFUCKYOU.hjson' file.
+	public override void SetDefaults()
+	{
+        Item.damage = 50;
+        Item.DamageType = DamageClass.Melee;
+        Item.width = 40;
+        Item.height = 40;
+        Item.useTime = 20;
+        Item.useAnimation = 20;
+        Item.useStyle = ItemUseStyleID.Swing;
+        Item.knockBack = 6;
+        Item.value = Item.buyPrice(silver: 1);
+        Item.rare = ItemRarityID.Blue;
+        Item.UseSound = SoundID.Item1;
+        Item.autoReuse = true;
     }
 
-    public override void SetDefaults()
+    public override void AddRecipes()
     {
-        item.width = 10;
-        item.height = 30;
-        item.rare = ItemRarityID.Common;
-        item.value = Item.buyPrice(silver: 5);
+        Recipe recipe = CreateRecipe();
+        recipe.AddIngredient(ItemID.DirtBlock, 10);
+        recipe.AddTile(TileID.WorkBenches);
+        recipe.Register();
     }
 }
