@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace TheLordsWill.Content.Items.Tiles;
+namespace TheLordsWill.Content.Items.Weapons.Tiles;
 
 public class Bronze_Bar : ModItem
 {

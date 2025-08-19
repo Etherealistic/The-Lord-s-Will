@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace TheLordsWill.Content.Items.Weapons;
+namespace TheLordsWill.Content.Items.Weapons.Weapons;
 
 public class Bronze_Bronzesword : ModItem
 {
@@ -16,7 +16,7 @@ public class Bronze_Bronzesword : ModItem
         Item.useTime = 18;
         Item.useAnimation = 20;
         Item.useStyle = ItemUseStyleID.Swing;
-        Item.knockBack = 6.5;
+        Item.knockBack = 6.5f;
         Item.value = Item.buyPrice(silver: 16);
         Item.rare = ItemRarityID.White;
         Item.UseSound = SoundID.Item1;
@@ -26,7 +26,7 @@ public class Bronze_Bronzesword : ModItem
     public override void AddRecipes()
     {
         Recipe recipe = CreateRecipe();
-        recipe.AddIngredient(ItemID.Bronze_Bar, 8);
+        recipe.AddIngredient(ItemID.DirtBlock, 8);
         recipe.AddTile(TileID.Anvils);
         recipe.Register();
     }

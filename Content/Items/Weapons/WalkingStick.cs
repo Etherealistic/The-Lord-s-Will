@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace TheLordsWill.Content.Items.Weapons;
+namespace TheLordsWill.Content.Items.Weapons.Weapons;
 
 public class WalkingStick : ModItem
 {
@@ -12,7 +12,7 @@ public class WalkingStick : ModItem
         Item.damage = 5;
         Item.DamageType = DamageClass.Melee;
         Item.width = 40;
-        Item.height = 40;
+        Item.height = 37;
         Item.useTime = 13;
         Item.useAnimation = 20;
         Item.useStyle = ItemUseStyleID.Swing;
