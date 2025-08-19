@@ -1,1 +1,6 @@
-{}
+Items: {
+	WalkingStick: {
+		Tooltip: ""
+		DisplayName: Walking Stick
+	}
+}
