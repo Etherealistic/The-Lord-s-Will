@@ -1,6 +1,9 @@
 {
   "rootNamespace": "TheLordsWill",
   "fileMap": {
-    "Items\\WalkingStick.cs": "TheLordsWill.Items"
+    "Items\\WalkingStick.cs": "TheLordsWill.Items",
+    "Content\\Items\\Weapons\\WalkingStick.cs": "TheLordsWill.Content.Items.Weapons",
+    "Content\\Items\\Weapons\\Bronze_Broadsword.cs": "TheLordsWill.Content.Items.Weapons",
+    "Content\\Items\\Tiles\\Bronze_Bar.cs": "TheLordsWill.Content.Items.Tiles"
   }
 }
