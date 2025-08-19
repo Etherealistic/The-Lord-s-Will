@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace TheLordsWill.Content.Items.Weapons.Weapons;
+namespace TheLordsWill.Content.Items.Weapons;
 
 public class WalkingStick : ModItem
 {

@@ -3,4 +3,9 @@ Items: {
 		Tooltip: ""
 		DisplayName: Walking Stick
 	}
+
+	Bronze_Broadsword: {
+		DisplayName: Bronze_ Broadsword
+		Tooltip: ""
+	}
 }
