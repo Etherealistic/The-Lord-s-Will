@@ -9,6 +9,8 @@
     "Content\\Items\\Mounts\\Kings_Chariot_Mount_Item.cs": "TheLordsWill.Content.Items.Mounts",
     "Content\\Mounts\\Kings_Chariot_Mount.cs": "TheLordsWill.Content.Mounts",
     "Content\\Buffs\\Kings_Chariot_Buff.cs": "TheLordsWill.Content.Buffs",
-    "Content\\Items\\Tools\\Bronze_Pickaxe.cs": "TheLordsWill.Content.Items.Tools"
+    "Content\\Items\\Tools\\Bronze_Pickaxe.cs": "TheLordsWill.Content.Items.Tools",
+    "Content\\NPCs\\Enemies\\Fallen_Knight.cs": "TheLordsWill.Content.NPCs.Enemies",
+    "Content\\Items\\Weapons\\Squire_Sword.cs": "TheLordsWill.Content.Items.Weapons"
   }
 }

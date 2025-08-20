@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zAZs5d11MuA=",
+  "dgSpecHash": "7b48hzy+OZM=",
   "success": true,
   "projectFilePath": "c:\\Users\\Francesco\\OneDrive\\Documents\\Documents\\University\\Personal Projects\\The Lord's Will\\TheLordsWill.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
-    "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
-    "C:\\Users\\Francesco\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
