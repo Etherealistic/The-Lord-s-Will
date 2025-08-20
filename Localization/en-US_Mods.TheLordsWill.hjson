@@ -1,11 +1,1 @@
-Items: {
-	WalkingStick: {
-		Tooltip: ""
-		DisplayName: Walking Stick
-	}
-
-	Bronze_Broadsword: {
-		Tooltip: ""
-		DisplayName: Bronze_ Broadsword
-	}
-}
+{}

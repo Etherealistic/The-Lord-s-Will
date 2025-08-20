@@ -4,6 +4,7 @@
     "Items\\WalkingStick.cs": "TheLordsWill.Items",
     "Content\\Items\\Weapons\\Bronze_Broadsword.cs": "TheLordsWill.Content.Items.Weapons",
     "Content\\Items\\Weapons\\WalkingStick.cs": "TheLordsWill.Content.Items.Weapons",
-    "Content\\Items\\Tools\\Bronze_Axe.cs": "TheLordsWill.Content.Items.Tools"
+    "Content\\Items\\Tools\\Bronze_Axe.cs": "TheLordsWill.Content.Items.Tools",
+    "Content\\Items\\Placeables\\Bronze_Bar.cs": "TheLordsWill.Content.Items.Placeables"
   }
 }
