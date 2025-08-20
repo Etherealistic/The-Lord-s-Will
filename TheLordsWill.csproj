@@ -5,7 +5,9 @@
 
 	<!-- General -->
 	<PropertyGroup>
-		
+		<TargetFramework>net9.0</TargetFramework>
+		<AssemblyName>TheLordsWill</AssemblyName>
+    	<LangVersion>latest</LangVersion>
 	</PropertyGroup>
 
 	<!-- References -->

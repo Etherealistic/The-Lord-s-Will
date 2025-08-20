@@ -5,6 +5,9 @@
     "Content\\Items\\Weapons\\Bronze_Broadsword.cs": "TheLordsWill.Content.Items.Weapons",
     "Content\\Items\\Weapons\\WalkingStick.cs": "TheLordsWill.Content.Items.Weapons",
     "Content\\Items\\Tools\\Bronze_Axe.cs": "TheLordsWill.Content.Items.Tools",
-    "Content\\Items\\Placeables\\Bronze_Bar.cs": "TheLordsWill.Content.Items.Placeables"
+    "Content\\Items\\Placeables\\Bronze_Bar.cs": "TheLordsWill.Content.Items.Placeables",
+    "Content\\Items\\Mounts\\Kings_Chariot_Mount_Item.cs": "TheLordsWill.Content.Items.Mounts",
+    "Content\\Mounts\\Kings_Chariot_Mount.cs": "TheLordsWill.Content.Mounts",
+    "Content\\Buffs\\Kings_Chariot_Buff.cs": "TheLordsWill.Content.Buffs"
   }
 }
