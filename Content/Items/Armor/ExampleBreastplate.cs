@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace ExampleMod.Content.Items.Armor
+namespace TheLordsWill.Content.Items.Armor
 {
 	// The AutoloadEquip attribute automatically attaches an equip texture to this item.
 	// Providing the EquipType.Body value here will result in TML expecting a X_Body.png file to be placed next to the item's main texture.
@@ -31,8 +31,9 @@ namespace ExampleMod.Content.Items.Armor
 
 		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
 		public override void AddRecipes() {
-			CreateRecipe().AddIngredient<ExampleItem>()
-				.AddTile<Tiles.Furniture.ExampleWorkbench>()
+			CreateRecipe()
+				.AddIngredient<Placeables.Bronze_Bar>(8)
+				.AddTile<TileID.Anvils>()
 				.Register();
 		}
 	}

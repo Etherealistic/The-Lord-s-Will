@@ -36,4 +36,14 @@ Items: {
 		Tooltip: Test
 		SetBonus: Super bonus
 	}
+
+	ExampleBreastplate: {
+		DisplayName: Da Chestplate
+		Tooltip: Make you stronk
+	}
+
+	ExampleLeggings: {
+		DisplayName: Super leggings
+		Tooltip: Run super fast
+	}
 }
