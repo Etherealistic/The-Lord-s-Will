@@ -28,7 +28,7 @@ namespace TheLordsWill.Content.Items.Placeables
             Item.useTime = 10;
             Item.autoReuse = true;
 
-            // Item.createTile = ModContent.TileType<Tiles.Bronze_Bar>();
+            Item.createTile = ModContent.TileType<Tiles.Bronze_Bar>();
             Item.placeStyle = 0;
         }
 
