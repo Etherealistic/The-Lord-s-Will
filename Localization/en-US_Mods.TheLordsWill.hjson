@@ -30,4 +30,10 @@ Items: {
 		DisplayName: Walking Stick
 		Tooltip: Barely more effective than a long branch
 	}
+
+	ExampleHelmet: {
+		DisplayName: Da Helmet
+		Tooltip: Test
+		SetBonus: Super bonus
+	}
 }
