@@ -5,7 +5,7 @@ Items: {
 	}
 
 	Bronze_Broadsword: {
-		DisplayName: Bronze_ Broadsword
 		Tooltip: ""
+		DisplayName: Bronze_ Broadsword
 	}
 }
