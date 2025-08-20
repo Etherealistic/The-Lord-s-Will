@@ -8,8 +8,8 @@ namespace TheLordsWill.Content.Items.Mounts
 	public class Kings_Chariot_Mount_Item : ModItem
 	{
 		public override void SetDefaults() {
-			Item.width = 20;
-			Item.height = 30;
+			Item.width = 27;
+			Item.height = 27;
 			Item.useTime = 20;
 			Item.useAnimation = 20;
 			Item.useStyle = ItemUseStyleID.Swing; // how the player's arm moves when using the item
@@ -24,7 +24,7 @@ namespace TheLordsWill.Content.Items.Mounts
 		public override void AddRecipes() {
 			CreateRecipe()
 				.AddIngredient(RecipeGroupID.Wood, 4)
-				.AddTile<Tiles.Anvils>()
+				.AddTile(TileID.Anvils)
 				.Register();
 		}
 	}

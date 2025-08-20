@@ -10,11 +10,8 @@ using Terraria.ModLoader;
 
 namespace TheLordsWill.Content.Mounts
 {
-	// This mount is a car with wheels which behaves similarly to the unicorn mount. The car has 3 balloons attached to the back.
 	public class Kings_Chariot_Mount : ModMount
 	{
-
-
 		public override void SetStaticDefaults() {
 			// Movement
 			MountData.jumpHeight = 5; // How high the mount can jump.
@@ -32,44 +29,23 @@ namespace TheLordsWill.Content.Mounts
 			MountData.fatigueMax = 0;
 			MountData.buff = ModContent.BuffType<Buffs.Kings_Chariot_Buff>(); // The ID number of the buff assigned to the mount.
 
-			// Effects
-			MountData.spawnDust = ModContent.DustType<Dusts.Sparkle>(); // The ID of the dust spawned when mounted or dismounted.
-
-			// Frame data and player offsets
+            // Frame data and player offsets
+            MountData.playerYOffsets = new int[] {21, 20}; // where is the players Y position on the mount for each frame of animation
 			MountData.totalFrames = 2; // Amount of animation frames for the mount
-			MountData.playerYOffsets = Enumerable.Repeat(20, MountData.totalFrames).ToArray(); // Fills an array with values for less repeating code
-			MountData.xOffset = 13;
-			MountData.yOffset = -12;
-			MountData.playerHeadOffset = 22;
+
+            MountData.runningFrameCount = 2;
+            MountData.runningFrameDelay = 60;
+
+			MountData.xOffset = -20;
+			MountData.yOffset = 0;
+			MountData.playerHeadOffset = 12;
 			MountData.bodyFrame = 3;
-			// Running
-			MountData.runningFrameCount = 2;
-			MountData.runningFrameDelay = 60;
-			MountData.runningFrameStart = 0;
-			// Idle
-			MountData.idleFrameCount = 1;
-			MountData.idleFrameDelay = 12;
-			MountData.idleFrameStart = 0;
-			MountData.idleFrameLoop = true;
 
 			if (!Main.dedServ) {
-				MountData.textureWidth = MountData.backTexture.Width() + 20;
-				MountData.textureHeight = MountData.backTexture.Height();
+				MountData.textureWidth = 194;
+				MountData.textureHeight = 132;
 			}
 
-		}
-		public override void SetMount(Player player, ref bool skipDust) {
-			// When this mount is mounted, we initialize _mountSpecificData with a new CarSpecificData object which will track some extra visuals for the mount.
-			player.mount._mountSpecificData = new CarSpecificData();
-
-			// This code bypasses the normal mount spawning dust and replaces it with our own visual.
-			if (!Main.dedServ) {
-				for (int i = 0; i < 16; i++) {
-					Dust.NewDustPerfect(player.Center + new Vector2(80, 0).RotatedBy(i * Math.PI * 2 / 16f), MountData.spawnDust);
-				}
-
-				skipDust = true;
-			}
 		}
 	}
 }

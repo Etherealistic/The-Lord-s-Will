@@ -10,8 +10,8 @@ namespace TheLordsWill.Content.Items.Placeables
     {
         public override void SetStaticDefaults()
         {
-            SacrificeTotal = 25;
-            ItemID.Sets.SortingPriorityMaterials[Type] = 59;
+            Item.ResearchUnlockCount = 25;
+            ItemID.Sets.SortingPriorityMaterials[Item.type] = 59; // Influences the inventory sort order. 59 is PlatinumBar, higher is more valuable.
         }
 
         public override void SetDefaults()
@@ -28,16 +28,16 @@ namespace TheLordsWill.Content.Items.Placeables
             Item.useTime = 10;
             Item.autoReuse = true;
 
-            Item.createTile = ModContent.TileType<Tiles.Bronze_Bar>();
+            // Item.createTile = ModContent.TileType<Tiles.Bronze_Bar>();
             Item.placeStyle = 0;
         }
 
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient<ItemID.TinOre>(2)
-                .AddIngredient<ItemID.CopperOre(4)
-                .AddTile<TileID.Furnaces>()
+                .AddIngredient(ItemID.TinOre, 2)
+                .AddIngredient(ItemID.CopperOre, 4)
+                .AddTile(TileID.Furnaces)
                 .Register();
         }
     }

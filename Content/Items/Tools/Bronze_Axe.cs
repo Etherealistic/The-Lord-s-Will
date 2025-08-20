@@ -27,7 +27,7 @@ public class Bronze_Axe : ModItem
     public override void AddRecipes()
     {
         Recipe recipe = CreateRecipe();
-        recipe.AddIngredient(ModContent.ItemType<Bronze_Bar>, 8);
+        recipe.AddIngredient<Placeables.Bronze_Bar>(8);
         recipe.AddIngredient(RecipeGroupID.Wood, 4);
         recipe.AddTile(TileID.Anvils);
         recipe.Register();
