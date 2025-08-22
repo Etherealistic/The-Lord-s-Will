@@ -8,14 +8,14 @@ namespace TheLordsWill.Content.Items.Armor
 	// The AutoloadEquip attribute automatically attaches an equip texture to this item.
 	// Providing the EquipType.Legs value here will result in TML expecting a X_Legs.png file to be placed next to the item's main texture.
 	[AutoloadEquip(EquipType.Legs)]
-	public class ExampleLeggings : ModItem
+	public class Bronze_Leggings : ModItem
 	{
 		public static readonly int MoveSpeedBonus = 5;
 
 		public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(MoveSpeedBonus);
 
 		public override void SetDefaults() {
-			Item.width = 18; // Width of the item
+			Item.width = 22; // Width of the item
 			Item.height = 18; // Height of the item
 			Item.value = Item.sellPrice(gold: 1); // How many coins the item is worth
 			Item.rare = ItemRarityID.Green; // The rarity of the item
@@ -30,7 +30,7 @@ namespace TheLordsWill.Content.Items.Armor
 		public override void AddRecipes() {
 			CreateRecipe()
 				.AddIngredient<Placeables.Bronze_Bar>(8)
-				.AddTile<TileID.Anvils>()
+				.AddTile(TileID.Anvils)
 				.Register();
 		}
 	}
