@@ -1,16 +1,12 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 
 namespace TheLordsWill.Content.Items.Weapons;
 
 public class Squire_Sword : ModItem
 {
-    public override void SetStaticDefaults()
-    {
-        DisplayName.SetDefault("Squire's Sword"); //Sets Item name
-        Tooltip.SetDefault("Once belonged to a great warrior. \nRight click to parry incoming projectiles."); //Sets tooltip when hovering in inventory
-    }
     public override void SetDefaults()
     {
         Item.damage = 25;
@@ -38,12 +34,8 @@ public class Squire_Sword : ModItem
         {
 
             Item.useStyle = ItemUseStyleId.Shoot;
-
-            foreach (Entity entity in IEntitySource)
-                if (IsInRangeOfMeOrMyOwner())
-                {
-                        
-                }
+            Item.damage = 0;
+            Item.noMelee = true;
 
         }
         else //Sets what happens on left click (normal use)
@@ -61,6 +53,51 @@ public class Squire_Sword : ModItem
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
         }
-    return true;
+        return true;
+    }
+
+    public override void UseStyle(Player player, Rectangle heldItemFrame)
+    {
+        if (player.altFunctionUse == 2) // Right click (parry)
+        {
+            // Define parry hitbox
+            Rectangle parryHitbox = new Rectangle(
+                (int)(player.position.X + (player.direction == 1 ? 0 : -40)),
+                (int)(player.position.Y - 20),
+                40,
+                40
+            );
+
+            // Check for projectiles in the parry hitbox
+            for (int i = 0; i < Main.maxProjectiles; i++)
+            {
+                Projectile projectile = Main.projectile[i];
+                if (projectile.active && !projectile.friendly && projectile.hostile)
+                {
+                    Rectangle projectileHitbox = new Rectangle(
+                        (int)projectile.position.X,
+                        (int)projectile.position.Y,
+                        projectile.width,
+                        projectile.height
+                    );
+
+                    if (parryHitbox.Intersects(projectileHitbox))
+                    {
+                        // Destroy the projectile
+                        projectile.Kill();
+
+                        // Give player brief defense buff (5 seconds)
+                        player.AddBuff(ModContent.BuffType<Buffs.Riposte>(), 300);
+
+                        // Visual and audio feedback
+                        for (int d = 0; d < 10; d++)
+                        {
+                            Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Iron);
+                        }
+                        Main.PlaySound(SoundID.Item37, player.position);
+                    }
+                }
+            }
+        }
     }
 }

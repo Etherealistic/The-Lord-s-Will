@@ -5,7 +5,7 @@ using TheLordsWill.Content.Tiles;
 
 namespace TheLordsWill.Content.Items.Tools;
 
-public class Bronze_Axe : ModItem
+public class Bronze_Pickaxe : ModItem
 {
     public override void SetDefaults()
     {
@@ -21,7 +21,7 @@ public class Bronze_Axe : ModItem
         Item.rare = ItemRarityID.White;
         Item.UseSound = SoundID.Item1;
         Item.autoReuse = true;
-        Item.pickaxe = 52;
+        Item.pick = 52;
     }
 
     public override void AddRecipes()

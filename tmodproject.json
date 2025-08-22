@@ -11,6 +11,7 @@
     "Content\\Buffs\\Kings_Chariot_Buff.cs": "TheLordsWill.Content.Buffs",
     "Content\\Items\\Tools\\Bronze_Pickaxe.cs": "TheLordsWill.Content.Items.Tools",
     "Content\\NPCs\\Enemies\\Fallen_Knight.cs": "TheLordsWill.Content.NPCs.Enemies",
-    "Content\\Items\\Weapons\\Squire_Sword.cs": "TheLordsWill.Content.Items.Weapons"
+    "Content\\Items\\Weapons\\Squire_Sword.cs": "TheLordsWill.Content.Items.Weapons",
+    "Content\\Buffs\\Riposte.cs": "TheLordsWill.Content.Buffs"
   }
 }
