@@ -33,7 +33,7 @@ namespace TheLordsWill.Content.NPCs.Enemies
             NPC.knockBackResist = 0.5f;
 
             AIType = NPCID.PossessedArmor;
-            AnimationType = NPCID.PossessedArmor;
+            
 
             Banner = Item.NPCtoBanner(NPCID.PossessedArmor);
             BannerItem = Item.BannerToItem(Banner);
