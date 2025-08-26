@@ -42,11 +42,7 @@ public class Squire_Sword : ModItem
         else //Sets what happens on left click (normal use)
         {
             Item.damage = 25;
-            Item.DamageType = DamageClass.Melee;
-            Item.width = 40;
-            Item.height = 37;
-            Item.useTime = 15;
-            Item.useAnimation = 20;
+            Item.noMelee = false;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.knockBack = 7;
             Item.value = Item.buyPrice(gold: 1);

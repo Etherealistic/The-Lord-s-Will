@@ -12,7 +12,7 @@ namespace TheLordsWill.Content.NPCs.Enemies
     {
         public override void SetStaticDefaults()
         {
-            Main.npcFrameCount[Type] = Main.npcFrameCount[NPCID.Zombie];
+            Main.npcFrameCount[Type] = 9;
 
             NPCID.Sets.ShimmerTransformToNPC[NPC.type] = NPCID.Skeleton;
 
@@ -30,10 +30,12 @@ namespace TheLordsWill.Content.NPCs.Enemies
             NPC.defense = 12;
             NPC.lifeMax = 80;
             NPC.value = 600f;
-            NPC.knockBackResist = 0.5f;
+            NPC.knockBackResist = 0.7f;
 
             AIType = NPCID.PossessedArmor;
-            
+            AnimationType = NPCID.PossessedArmor;
+
+
 
             Banner = Item.NPCtoBanner(NPCID.PossessedArmor);
             BannerItem = Item.BannerToItem(Banner);
@@ -42,7 +44,7 @@ namespace TheLordsWill.Content.NPCs.Enemies
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
             var possessedArmorDropRule = Main.ItemDropsDB.GetRulesForNPCID(NPCID.PossessedArmor, false);
-            foreach(var rule in possessedArmorDropRule)
+            foreach (var rule in possessedArmorDropRule)
             {
                 npcLoot.Add(rule);
             }
@@ -52,7 +54,7 @@ namespace TheLordsWill.Content.NPCs.Enemies
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return SpawnCondition.OverworldDay.Chance - 0.65f;
+            return SpawnCondition.OverworldNight.Chance - 0.65f;
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

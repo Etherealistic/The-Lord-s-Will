@@ -1,1 +1,82 @@
-{}
+Buffs: {
+	Kings_Chariot_Buff: {
+		DisplayName: The King's Chariot
+		Description: A helpful Bergentruck has adopted you.
+	}
+
+	Riposte: {
+		DisplayName: Riposte
+		Description: Mods.TheLordsWill.Buffs.Riposte.Description
+	}
+}
+
+Items: {
+	Kings_Chariot_Mount_Item: {
+		DisplayName: Car Keys
+		Tooltip: Preferably used after a beer
+	}
+
+	Bronze_Bar: {
+		DisplayName: Bronze Bar
+		Tooltip: An alloy known for its strength
+	}
+
+	Bronze_Axe: {
+		DisplayName: Bronze Axe
+		Tooltip: ""
+	}
+
+	Bronze_Broadsword: {
+		DisplayName: Bronze Broadsword
+		Tooltip: ""
+	}
+
+	WalkingStick: {
+		DisplayName: Walking Stick
+		Tooltip: Barely more effective than a long branch
+	}
+
+	ExampleHelmet: {
+		DisplayName: Da Helmet
+		Tooltip: Test
+		SetBonus: Super bonus
+	}
+
+	ExampleBreastplate: {
+		DisplayName: Da Chestplate
+		Tooltip: Make you stronk
+	}
+
+	ExampleLeggings: {
+		DisplayName: Super leggings
+		Tooltip: Run super fast
+	}
+
+	Bronze_Helmet: {
+		SetBonus: Mods.TheLordsWill.Items.Bronze_Helmet.SetBonus
+		DisplayName: Bronze_ Helmet
+		Tooltip: ""
+	}
+
+	Bronze_Breastplate: {
+		DisplayName: Bronze_ Breastplate
+		Tooltip: ""
+	}
+
+	Bronze_Leggings: {
+		DisplayName: Bronze_ Leggings
+		Tooltip: ""
+	}
+
+	Bronze_Pickaxe: {
+		DisplayName: Bronze Pickaxe
+		Tooltip: ""
+	}
+
+	Squire_Sword: {
+		DisplayName: Squire Sword
+		Tooltip: ""
+	}
+}
+
+NPCs.Fallen_Knight.DisplayName: Fallen Knight
