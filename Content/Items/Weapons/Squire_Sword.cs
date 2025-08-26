@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
+using Terraria.Audio;
 
 namespace TheLordsWill.Content.Items.Weapons;
 
@@ -11,8 +12,8 @@ public class Squire_Sword : ModItem
     {
         Item.damage = 25;
         Item.DamageType = DamageClass.Melee;
-        Item.width = 40;
-        Item.height = 37;
+        Item.width = 32;
+        Item.height = 32;
         Item.useTime = 15;
         Item.useAnimation = 20;
         Item.useStyle = ItemUseStyleID.Swing;
@@ -33,7 +34,7 @@ public class Squire_Sword : ModItem
         if (player.altFunctionUse == 2) //Sets what happens on right click (special ability)
         {
 
-            Item.useStyle = ItemUseStyleId.Shoot;
+            Item.useStyle = ItemUseStyleID.Shoot;
             Item.damage = 0;
             Item.noMelee = true;
 
@@ -94,7 +95,7 @@ public class Squire_Sword : ModItem
                         {
                             Dust.NewDust(projectile.position, projectile.width, projectile.height, DustID.Iron);
                         }
-                        Main.PlaySound(SoundID.Item37, player.position);
+                        SoundEngine.PlaySound(SoundID.Item37, player.position);
                     }
                 }
             }

@@ -34,7 +34,7 @@ namespace TheLordsWill.Content.Items.Armor
 
 		// IsArmorSet determines what armor pieces are needed for the setbonus to take effect
 		public override bool IsArmorSet(Item head, Item body, Item legs) {
-			return body.type == ModContent.ItemType<BronzeBreastplate>() && legs.type == ModContent.ItemType<BronzeLeggings>();
+			return body.type == ModContent.ItemType<Bronze_Breastplate>() && legs.type == ModContent.ItemType<Bronze_Leggings>();
 		}
 
 		// UpdateArmorSet allows you to give set bonuses to the armor.

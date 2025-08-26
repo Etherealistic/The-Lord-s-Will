@@ -42,7 +42,7 @@ namespace TheLordsWill.Content.NPCs.Enemies
         public override void ModifyNPCLoot(NPCLoot npcLoot)
         {
             var possessedArmorDropRule = Main.ItemDropsDB.GetRulesForNPCID(NPCID.PossessedArmor, false);
-            foreach(var rule in zombieDropRule)
+            foreach(var rule in possessedArmorDropRule)
             {
                 npcLoot.Add(rule);
             }
@@ -52,7 +52,7 @@ namespace TheLordsWill.Content.NPCs.Enemies
 
         public override float SpawnChance(NPCSpawnInfo spawnInfo)
         {
-            return SpawnCondition.OverworldDayMonster.Chance - 0.65f;
+            return SpawnCondition.OverworldDay.Chance - 0.65f;
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

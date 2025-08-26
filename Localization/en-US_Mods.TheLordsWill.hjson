@@ -3,6 +3,11 @@ Buffs: {
 		DisplayName: The King's Chariot
 		Description: A helpful Bergentruck has adopted you.
 	}
+
+	Riposte: {
+		DisplayName: Riposte
+		Description: Mods.TheLordsWill.Buffs.Riposte.Description
+	}
 }
 
 Items: {
@@ -46,4 +51,32 @@ Items: {
 		DisplayName: Super leggings
 		Tooltip: Run super fast
 	}
+
+	Bronze_Helmet: {
+		SetBonus: Mods.TheLordsWill.Items.Bronze_Helmet.SetBonus
+		DisplayName: Bronze_ Helmet
+		Tooltip: ""
+	}
+
+	Bronze_Breastplate: {
+		DisplayName: Bronze_ Breastplate
+		Tooltip: ""
+	}
+
+	Bronze_Leggings: {
+		DisplayName: Bronze_ Leggings
+		Tooltip: ""
+	}
+
+	Bronze_Pickaxe: {
+		DisplayName: Bronze Pickaxe
+		Tooltip: ""
+	}
+
+	Squire_Sword: {
+		DisplayName: Squire Sword
+		Tooltip: ""
+	}
 }
+
+NPCs.Fallen_Knight.DisplayName: Fallen Knight
