@@ -28,9 +28,8 @@ public class WalkingStick : ModItem
     public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
     {
         // Separate item display in inventory
-        Texture2D texture = ModContent.Request<Texture2D>("Content/Items/Weapons/WalkingStickInventory").Value;
-        //spriteBatch.Draw(texture, position, null, drawColor, 0f, origin, scale, SpriteEffects.None, 0f);
-        spriteBatch.Draw(texture, new Rectangle((int)position.X, (int)position.Y, (int)(frame.Width * scale), (int)(frame.Height * scale)), drawColor);
+        Texture2D texture = ModContent.Request<Texture2D>("TheLordsWill/Content/Items/Weapons/WalkingStickInventory").Value;
+        spriteBatch.Draw(texture, position, null, drawColor, 0f, origin, scale, SpriteEffects.None, 0f);
         return false;  //Stops default drawing
     }
 
