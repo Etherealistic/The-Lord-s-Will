@@ -77,6 +77,11 @@ Items: {
 		DisplayName: Squire Sword
 		Tooltip: ""
 	}
+
+	Hand_Cannon: {
+		DisplayName: Hand_ Cannon
+		Tooltip: ""
+	}
 }
 
 NPCs.Fallen_Knight.DisplayName: Fallen Knight

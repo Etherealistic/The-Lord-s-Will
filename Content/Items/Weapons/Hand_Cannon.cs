@@ -20,7 +20,7 @@ public class Hand_Cannon : ModItem
 			Item.useAnimation = 55; // The length of the item's use animation in ticks (60 ticks == 1 second.)
 			Item.useStyle = ItemUseStyleID.Shoot; // How you use the item (swinging, holding out, etc.)
 			Item.autoReuse = true; // Whether or not you can hold click to automatically use it again.
-			Item.UseSound = SoundID.Item16; // The sound that this item plays when used.
+			Item.UseSound = SoundID.Item14; // The sound that this item plays when used.
 
 			// Weapon Properties
 			Item.DamageType = DamageClass.Ranged; // Sets the damage type to ranged.
@@ -31,19 +31,20 @@ public class Hand_Cannon : ModItem
 			// Gun Properties
 			Item.shoot = ProjectileID.PurificationPowder; // For some reason, all the guns in the vanilla source have this.
 			Item.shootSpeed = 10f; // The speed of the projectile (measured in pixels per frame.)
-			Item.useAmmo = AmmoID.Bullet; // The "ammo Id" of the ammo item that this weapon uses. Ammo IDs are magic numbers that usually correspond to the item id of one item that most commonly represent the ammo type.
+			Item.useAmmo = ItemID.Cannonball; // The "ammo Id" of the ammo item that this weapon uses. Ammo IDs are magic numbers that usually correspond to the item id of one item that most commonly represent the ammo type.
 		}
 
 		public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback) {
 
-			Projectile.NewProjectileDirect(source, position, newVelocity, ProjectileID.CannonballFriendly, damage, knockback, player.whoAmI);
+			Projectile.NewProjectileDirect(source, position, velocity, ProjectileID.CannonballFriendly, damage, knockback, player.whoAmI);
+			player.velocity = new Vector2(-velocity.X * 1.5f, -velocity.Y * 1.5f);
 
 			return false; // Return false because we don't want tModLoader to shoot projectile
 		}
 
 		// Please see Content/ExampleRecipes.cs for a detailed explanation of recipe creation.
 		public override void AddRecipes() {
-            Recipes recipe = CreateRecipe();
+            Recipe recipe = CreateRecipe();
 			recipe.AddIngredient(ItemID.DirtBlock, 8);
             recipe.AddTile(TileID.Anvils);
 			recipe.Register();
@@ -51,6 +52,6 @@ public class Hand_Cannon : ModItem
 
 		// This method lets you adjust position of the gun in the player's hands. Play with these values until it looks good with your graphics.
 		public override Vector2? HoldoutOffset() {
-			return new Vector2(-2f, -2f);
+			return new Vector2(-1f, -1f);
 		}
 	}
