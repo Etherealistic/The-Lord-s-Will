@@ -25,8 +25,8 @@ namespace TheLordsWill.Content.Items.Armor
 		}
 
 		public override void SetDefaults() {
-			Item.width = 24; // Width of the item
-			Item.height = 26; // Height of the item
+			Item.width = 20; // Width of the item
+			Item.height = 22; // Height of the item
 			Item.value = Item.sellPrice(gold: 1); // How many coins the item is worth
 			Item.rare = ItemRarityID.Green; // The rarity of the item
 			Item.defense = 5; // The amount of defense the item will give when equipped
