@@ -54,17 +54,17 @@ Items: {
 
 	Bronze_Helmet: {
 		SetBonus: Mods.TheLordsWill.Items.Bronze_Helmet.SetBonus
-		DisplayName: Bronze_ Helmet
+		DisplayName: Bronze Helmet
 		Tooltip: ""
 	}
 
 	Bronze_Breastplate: {
-		DisplayName: Bronze_ Breastplate
+		DisplayName: Bronze Breastplate
 		Tooltip: ""
 	}
 
 	Bronze_Leggings: {
-		DisplayName: Bronze_ Leggings
+		DisplayName: Bronze Leggings
 		Tooltip: ""
 	}
 
@@ -79,8 +79,8 @@ Items: {
 	}
 
 	Hand_Cannon: {
-		DisplayName: Hand_ Cannon
 		Tooltip: ""
+		DisplayName: Hand_ Cannon
 	}
 }
 
